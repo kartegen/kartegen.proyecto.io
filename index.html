@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Mapa Conceptual Interactivo </title>
+    <title>Mapa Conceptual Interactivo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -44,7 +44,10 @@
             transform: translateX(8px);
             box-shadow: 0 10px 25px rgba(21, 101, 192, 0.3);
         }
-        .apa-citation { font-size: 0.87rem; line-height: 1.45; }
+        .apa-citation { 
+            font-size: 0.86rem; 
+            line-height: 1.45; 
+        }
         .badge-group { margin-bottom: 10px; }
         .category-badge {
             font-size: 0.75rem;
@@ -72,7 +75,6 @@
         <div class="col-lg-7">
             <h4 class="text-primary mb-4 text-center"><i class="bi bi-diagram-3-fill"></i> Mapa Conceptual Interactivo</h4>
 
-            <!-- Salud Mental -->
             <div class="box main-box mb-2" data-toggle="salud">
                 <i class="bi bi-chevron-right float-end"></i> SALUD MENTAL Y BIENESTAR EMOCIONAL
             </div>
@@ -82,7 +84,6 @@
                 <div class="sub-box mb-2" data-category="salud">Uso y Hábitos Digitales</div>
             </div>
 
-            <!-- Autoestima -->
             <div class="box main-box mb-2" data-toggle="autoestima">
                 <i class="bi bi-chevron-right float-end"></i> AUTOESTIMA Y AUTOIMAGEN EN ADOLESCENTES
             </div>
@@ -90,7 +91,6 @@
                 <div class="sub-box mb-2" data-category="autoestima">Relación con la Autoestima</div>
             </div>
 
-            <!-- Adicción -->
             <div class="box main-box mb-2" data-toggle="adiccion">
                 <i class="bi bi-chevron-right float-end"></i> ADICCIÓN Y USO PROBLEMÁTICO DE REDES SOCIALES
             </div>
@@ -100,7 +100,6 @@
                 <div class="sub-box mb-2" data-category="adiccion">Tiempo de Uso Diario</div>
             </div>
 
-            <!-- Factores Educativos -->
             <div class="box main-box mb-2" data-toggle="factores">
                 <i class="bi bi-chevron-right float-end"></i> FACTORES EDUCATIVOS Y SOCIODEMOGRÁFICOS
             </div>
@@ -123,22 +122,22 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-// Datos de referencias
+// Referencias en formato APA completo
 const referencias = [
-    { cat: "salud", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span></div><div class="apa-citation">Rodríguez, N. P., Cruz, D. C., & Maldonado, I. A. (2025). Redes sociales en la salud mental de los adolescentes en entornos urbanos de Ecuador. <i>Prohominum. Revista de Ciencias Sociales y Humanas, 7</i>(2).</div></div>` },
-    { cat: "autoestima,adiccion", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span><span class="category-badge adiccion">Adicción</span></div><div class="apa-citation">Portillo-Reyes, V. et al. (2021). Relación del uso de redes sociales con la autoestima y la ansiedad...</div></div>` },
-    { cat: "factores,salud", html: `<div class="article-box"><div class="badge-group"><span class="category-badge factores">Factores Educativos</span><span class="category-badge salud">Salud Mental</span></div><div class="apa-citation">Dan-Álvarez et al. (2022). Usos y abusos de las redes sociales...</div></div>` },
-    { cat: "autoestima,adiccion", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span><span class="category-badge adiccion">Adicción</span></div><div class="apa-citation">Challco et al. (2016). Riesgo de adicción...</div></div>` },
-    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Ladera, I. (2016). La satisfacción con la imagen corporal...</div></div>` },
-    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Marín, V., & González, A. (2024). Uso de redes sociales y autoestima...</div></div>` },
-    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Encarnación, I. E., & Campodónico, N. (2024). Revisión sistemática...</div></div>` },
-    { cat: "adiccion,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge adiccion">Adicción</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Soria, P. A., & Villegas, N. J. (2024). Adicción a las redes sociales...</div></div>` },
-    { cat: "salud,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Bernal et al. (2025). El impacto del uso de redes sociales...</div></div>` },
-    { cat: "salud,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Granados-Sandoval & Valero (2025). El impacto del uso de redes sociales...</div></div>` },
-    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Martínez-García, A. (2024). Asociación entre el uso de las redes sociales...</div></div>` },
-    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Rabe-López & Romo-Pérez (2025). Influencia de las redes sociales en la imagen corporal...</div></div>` },
-    { cat: "salud,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Miller, C. (2023). Redes sociales y baja autoestima...</div></div>` },
-    { cat: "salud", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span></div><div class="apa-citation">Vial-Undurraga, J. P. (2015). Impacto de las redes sociales...</div></div>` }
+    { cat: "salud", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span></div><div class="apa-citation">Rodríguez, N. P., Cruz, D. C., & Maldonado, I. A. (2025). Redes sociales en la salud mental de los adolescentes en entornos urbanos de Ecuador. <i>Prohominum. Revista de Ciencias Sociales y Humanas, 7</i>(2). https://ve.scielo.org/scielo.php?pid=S266501692025000200198</div></div>` },
+    { cat: "autoestima,adiccion", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span><span class="category-badge adiccion">Adicción</span></div><div class="apa-citation">Portillo-Reyes, V., Ávila-Amaya, J. A., & Capps, J. W. (2021). Relación del uso de redes sociales con la autoestima y la ansiedad en estudiantes universitarios. <i>Enseñanza e Investigación en Psicología, 3</i>(1), 139-149. https://revistacneipne.org/index.php/cneip/article/view/116/113</div></div>` },
+    { cat: "factores,salud", html: `<div class="article-box"><div class="badge-group"><span class="category-badge factores">Factores Educativos</span><span class="category-badge salud">Salud Mental</span></div><div class="apa-citation">Dan-Álvarez-de-Sotomayor, I., Muñoz-Carril, P. C., & González-Sanmamed, M. (2022). Usos y abusos de las redes sociales por estudiantado español de Educación Secundaria. <i>Revista Electrónica Educare, 26</i>(3). https://www.scielo.sa.cr/scielo.php?pid=S1409-42582022000300354</div></div>` },
+    { cat: "autoestima,adiccion", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span><span class="category-badge adiccion">Adicción</span></div><div class="apa-citation">Challco, K., Rodríguez, S., & Jaimes, J. (2016). Riesgo de adicción a redes sociales, autoestima y autocontrol en estudiantes de secundaria. <i>Revista Científica de Ciencias de la Salud, 9</i>(1). https://www.issup.net/files/2018-11/236-311-1-PB.pdf</div></div>` },
+    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Ladera, I. (2016). <i>La satisfacción con la imagen corporal: su relación con las redes sociales y la autoestima</i> [Tesis de maestría, Universidad Pontificia Comillas]. https://repositorio.comillas.edu/xmlui/handle/11531/13133</div></div>` },
+    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Marín, V., & González, A. (2024). Uso de redes sociales y autoestima de adolescentes en una institución educativa de Boconó, Trujillo. <i>Revista del Grupo de Investigación en Comunidad y Salud, 9</i>(1). https://dialnet.unirioja.es/servlet/articulo?codigo=9428790</div></div>` },
+    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Encarnación, I. E., & Campodónico, N. (2024). Revisión sistemática sobre la influencia de las redes sociales en la autoestima de los adolescentes. <i>Revista Psicología UNEMI, 8</i>(15). https://ojs.unemi.edu.ec/index.php/faso-unemi/article/view/1880/1851</div></div>` },
+    { cat: "adiccion,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge adiccion">Adicción</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Soria, P. A., & Villegas, N. J. (2024). Adicción a las redes sociales y su relación con la autoestima en adolescentes. <i>Revista Psicología UNEMI, 8</i>(14). https://ojs.unemi.edu.ec/index.php/faso-unemi/article/view/1780/1733</div></div>` },
+    { cat: "salud,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Bernal, A. P., Tello, L. E., Cintia, A. V., Pluas, A. M., Cabrera, M. E., Jumbo, K. J., & Abad, L. A. (2025). El impacto del uso de redes sociales en la autoestima de adolescentes. <i>Ciencia Latina Revista Científica Multidisciplinar, 9</i>(1). https://ciencialatina.org/index.php/cienciala/article/view/15733</div></div>` },
+    { cat: "salud,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Granados-Sandoval, G., & Valero-Cedeño, N. J. (2025). El impacto del uso de redes sociales en la autoestima de los adolescentes. <i>Ciencia Latina Revista Científica Multidisciplinar, 9</i>(1). https://ciencialatina.org/index.php/cienciala/article/view/15733</div></div>` },
+    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Martínez-García, A. (2024). Asociación entre el uso de las redes sociales y la autoestima: una revisión sistemática. <i>Repositorio e-Buah</i>. https://ebuah.uah.es/dspace/handle/10017/61654</div></div>` },
+    { cat: "autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Rabe-López, M., & Romo-Pérez, V. (2025). Influencia de las redes sociales en la imagen corporal de adolescentes. <i>Enfermería Global, 24</i>(1). https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412025000100017</div></div>` },
+    { cat: "salud,autoestima", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span><span class="category-badge autoestima">Autoestima</span></div><div class="apa-citation">Miller, C. (2023). Redes sociales y baja autoestima: Por qué el uso de las redes sociales está relacionado con la inseguridad en los adolescentes. <i>Child Mind Institute</i>. https://childmind.org/es/articulo/las-redes-sociales-y-la-baja-autoestima/</div></div>` },
+    { cat: "salud", html: `<div class="article-box"><div class="badge-group"><span class="category-badge salud">Salud Mental</span></div><div class="apa-citation">Vial-Undurraga, J. P. (2015). Impacto de las redes sociales e internet en la adolescencia: Aspectos positivos y negativos. <i>Revista Médica Clínica Las Condes, 26</i>(1). https://www.sciencedirect.com/science/article/pii/S0716864015000048</div></div>` }
 ];
 
 function mostrarMensajeInicial() {
@@ -154,11 +153,9 @@ function filtrarPorCategoria(cat) {
     document.getElementById('references-container').innerHTML = filtradas.map(r => r.html).join('');
 }
 
-// Inicialización
 document.addEventListener('DOMContentLoaded', () => {
     mostrarMensajeInicial();
 
-    // Toggle de subtemas
     document.querySelectorAll('.main-box').forEach(box => {
         box.addEventListener('click', () => {
             const id = 'sub-' + box.getAttribute('data-toggle');
@@ -175,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Click en subtema → mostrar referencias
     document.querySelectorAll('.sub-box').forEach(sub => {
         sub.addEventListener('click', () => {
             const categoria = sub.getAttribute('data-category');
