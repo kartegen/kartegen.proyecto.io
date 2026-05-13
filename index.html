@@ -26,6 +26,7 @@
             margin-bottom: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             font-weight: 600;
+            position: relative;
         }
         .main-box {
             background: #66bb6a;
@@ -35,155 +36,108 @@
             background: #a5d6a7;
             font-size: 0.95rem;
             padding: 12px 18px;
+            margin-bottom: 8px;
         }
         .article-box {
-            background: #66bb6a;
-            color: #1b5e20;
+            background: white;
+            border-left: 5px solid #66bb6a;
             border-radius: 8px;
-            padding: 12px 15px;
-            margin-bottom: 10px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
             transition: all 0.3s;
-            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         .article-box:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(102, 187, 106, 0.4);
+            transform: translateX(8px);
+            box-shadow: 0 8px 20px rgba(102, 187, 106, 0.3);
         }
-        .connector {
-            height: 2px;
-            background: linear-gradient(to right, #81c784, #2e7d32);
-            margin: 20px 0;
-            position: relative;
+        .category-badge {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 600;
         }
-        .section-title {
-            font-size: 1.15rem;
-            font-weight: bold;
-            color: #1b5e20;
-        }
+        .salud { background-color: #81c784; color: #1b5e20; }
+        .autoestima { background-color: #66bb6a; color: white; }
+        .adiccion { background-color: #4caf50; color: white; }
+        .factores { background-color: #2e7d32; color: white; }
     </style>
 </head>
 <body class="py-4">
 
 <div class="container">
-    <!-- Título Principal -->
     <div class="main-title text-center mb-5">
         <h1 class="h3 fw-bold">IMPACTO DEL USO DE REDES SOCIALES<br>EN LA AUTOESTIMA DE LOS ADOLESCENTES</h1>
     </div>
 
-    <div class="row g-4">
-        <!-- Columna Izquierda - Estructura del Mapa -->
+    <div class="row g-5">
+        <!-- === MAPA CONCEPTUAL === -->
         <div class="col-lg-7">
-            <div class="row">
+            <h4 class="text-success mb-4 text-center"><i class="bi bi-diagram-3"></i> Mapa Conceptual</h4>
 
-                <!-- Salud Mental -->
-                <div class="col-12 mb-4">
-                    <div class="box main-box">SALUD MENTAL Y BIENESTAR EMOCIONAL</div>
-                    <div class="row ms-4">
-                        <div class="col-md-6">
-                            <div class="sub-box">Efectos en la Salud Mental (Urbanos Ecuador)</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sub-box">Estrés, Ansiedad y Cambios Emocionales</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sub-box">Uso y Hábitos Digitales</div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Salud Mental -->
+            <div class="box main-box">SALUD MENTAL Y BIENESTAR EMOCIONAL</div>
+            <div class="ms-4">
+                <div class="sub-box">Efectos en la Salud Mental (Urbanos Ecuador)</div>
+                <div class="sub-box">Estrés, Ansiedad y Cambios Emocionales</div>
+                <div class="sub-box">Uso y Hábitos Digitales</div>
+            </div>
 
-                <!-- Autoestima -->
-                <div class="col-12 mb-4">
-                    <div class="box main-box">AUTOESTIMA Y AUTOIMAGEN EN ADOLESCENTES</div>
-                    <div class="row ms-4">
-                        <div class="col-12">
-                            <div class="sub-box">Relación con la Autoestima</div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Autoestima -->
+            <div class="box main-box mt-4">AUTOESTIMA Y AUTOIMAGEN EN ADOLESCENTES</div>
+            <div class="ms-4">
+                <div class="sub-box">Relación con la Autoestima</div>
+            </div>
 
-                <!-- Adicción -->
-                <div class="col-12 mb-4">
-                    <div class="box main-box">ADICCIÓN Y USO PROBLEMÁTICO DE REDES SOCIALES</div>
-                    <div class="row ms-4">
-                        <div class="col-md-6">
-                            <div class="sub-box">Adicción y Comportamientos Problemáticos</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sub-box">Obsesión por Conexión y Estado de Ánimo</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sub-box">Tiempo de Uso Diario</div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Adicción -->
+            <div class="box main-box mt-4">ADICCIÓN Y USO PROBLEMÁTICO DE REDES SOCIALES</div>
+            <div class="ms-4">
+                <div class="sub-box">Adicción y Comportamientos Problemáticos</div>
+                <div class="sub-box">Obsesión por Conexión y Estado de Ánimo</div>
+                <div class="sub-box">Tiempo de Uso Diario</div>
+            </div>
 
-                <!-- Factores Educativos -->
-                <div class="col-12 mb-4">
-                    <div class="box main-box">FACTORES EDUCATIVOS Y SOCIODEMOGRÁFICOS</div>
-                    <div class="row ms-4">
-                        <div class="col-md-6">
-                            <div class="sub-box">Perfil de Rendimiento Académico</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sub-box">Diferencias por Sexo</div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sub-box">Educación y Concienciación (Uso Saludable)</div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Factores Educativos -->
+            <div class="box main-box mt-4">FACTORES EDUCATIVOS Y SOCIODEMOGRÁFICOS</div>
+            <div class="ms-4">
+                <div class="sub-box">Perfil de Rendimiento Académico</div>
+                <div class="sub-box">Diferencias por Sexo</div>
+                <div class="sub-box">Educación y Concienciación (Uso Saludable)</div>
             </div>
         </div>
 
-        <!-- Columna Derecha - Artículos (Hipervínculos) -->
+        <!-- === REFERENCIAS CON CONEXIONES === -->
         <div class="col-lg-5">
-            <h4 class="section-title mb-3 text-center">
-                <i class="bi bi-journal-text"></i> Referencias Citadas
+            <h4 class="text-success mb-4 text-center">
+                <i class="bi bi-journal-text"></i> Referencias por Tema
             </h4>
 
             <div class="article-box">
+                <span class="category-badge salud">Salud Mental</span><br>
                 <a href="https://ve.scielo.org/scielo.php?pid=S266501692025000200198&script=sci_arttext&tlng=es" target="_blank" class="text-decoration-none text-dark">
                     <strong>Rodríguez et al. (2025)</strong><br>
-                    <small>Redes sociales en la salud mental de los adolescentes en entornos urbanos de Ecuador</small>
+                    <small>Redes sociales en la salud mental de los adolescentes</small>
                 </a>
             </div>
 
             <div class="article-box">
+                <span class="category-badge autoestima">Autoestima</span><br>
                 <a href="https://revistacneipne.org/index.php/cneip/article/view/116/113" target="_blank" class="text-decoration-none text-dark">
                     <strong>Portillo-Reyes et al. (2021)</strong><br>
-                    <small>Relación del Uso de Redes Sociales con la Autoestima y la Ansiedad</small>
+                    <small>Relación del Uso de Redes Sociales con la Autoestima y Ansiedad</small>
                 </a>
             </div>
 
             <div class="article-box">
+                <span class="category-badge adiccion">Adicción</span><br>
                 <a href="https://www.scielo.sa.cr/scielo.php?pid=S1409-42582022000300354&script=sci_arttext" target="_blank" class="text-decoration-none text-dark">
                     <strong>Dan-Álvarez et al. (2022)</strong><br>
-                    <small>Usos y abusos de las redes sociales por estudiantado español</small>
+                    <small>Usos y abusos de las redes sociales</small>
                 </a>
             </div>
 
             <div class="article-box">
-                <a href="https://ciencialatina.org/index.php/cienciala/article/view/15733" target="_blank" class="text-decoration-none text-dark">
-                    <strong>Granados-Sandoval & Valero-Cedeño (2025)</strong><br>
-                    <small>El impacto del uso de redes sociales en la autoestima</small>
-                </a>
-            </div>
-
-            <div class="article-box">
-                <a href="https://ebuah.uah.es/dspace/handle/10017/61654" target="_blank" class="text-decoration-none text-dark">
-                    <strong>Martínez-García (2024)</strong><br>
-                    <small>Asociación entre el uso de las redes sociales y la autoestima</small>
-                </a>
-            </div>
-
-            <div class="article-box">
-                <a href="https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412025000100017" target="_blank" class="text-decoration-none text-dark">
-                    <strong>Rabe-López & Romo-Pérez (2025)</strong><br>
-                    <small>Influencia de las redes sociales en la imagen corporal</small>
-                </a>
-            </div>
-
-            <div class="article-box">
+                <span class="category-badge autoestima">Autoestima</span><br>
                 <a href="https://ojs.unemi.edu.ec/index.php/faso-unemi/article/view/1880/1851" target="_blank" class="text-decoration-none text-dark">
                     <strong>Encarnación & Campodónico (2024)</strong><br>
                     <small>Revisión sistemática sobre la influencia en la autoestima</small>
@@ -191,6 +145,7 @@
             </div>
 
             <div class="article-box">
+                <span class="category-badge adiccion">Adicción</span><br>
                 <a href="https://ojs.unemi.edu.ec/index.php/faso-unemi/article/view/1780/1733" target="_blank" class="text-decoration-none text-dark">
                     <strong>Soria & Villegas (2024)</strong><br>
                     <small>Adicción a las redes sociales y relación con la autoestima</small>
@@ -198,6 +153,31 @@
             </div>
 
             <div class="article-box">
+                <span class="category-badge salud">Salud Mental</span><br>
+                <a href="https://ciencialatina.org/index.php/cienciala/article/view/15733" target="_blank" class="text-decoration-none text-dark">
+                    <strong>Granados-Sandoval & Valero (2025)</strong><br>
+                    <small>El impacto del uso de redes sociales en la autoestima</small>
+                </a>
+            </div>
+
+            <div class="article-box">
+                <span class="category-badge autoestima">Autoestima</span><br>
+                <a href="https://ebuah.uah.es/dspace/handle/10017/61654" target="_blank" class="text-decoration-none text-dark">
+                    <strong>Martínez-García (2024)</strong><br>
+                    <small>Asociación entre uso de redes y autoestima</small>
+                </a>
+            </div>
+
+            <div class="article-box">
+                <span class="category-badge autoestima">Autoestima</span><br>
+                <a href="https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1695-61412025000100017" target="_blank" class="text-decoration-none text-dark">
+                    <strong>Rabe-López & Romo-Pérez (2025)</strong><br>
+                    <small>Influencia en la imagen corporal de adolescentes</small>
+                </a>
+            </div>
+
+            <div class="article-box">
+                <span class="category-badge salud">Salud Mental</span><br>
                 <a href="https://childmind.org/es/articulo/las-redes-sociales-y-la-baja-autoestima/" target="_blank" class="text-decoration-none text-dark">
                     <strong>Miller (2023)</strong><br>
                     <small>Redes sociales y baja autoestima</small>
